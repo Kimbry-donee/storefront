@@ -1,0 +1,79 @@
+{%extends 'base.html'%}
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+ </head>
+ <body>
+   
+{%block content%}
+
+    <h1>Products</h1>
+    
+    <div class="row">
+
+        {% for product in products%}
+
+<div class="container">
+    <div class="card">
+      <div class="card-head">
+         <img src="{{ product.image_url }}" width="300" height="300" alt="Shoe" class="product-img">
+        <div class="product-detail">
+          <h2>Kimbry store</h2> Dell computer 
+        </div>
+        <span class="back-text">
+                DONE
+              </span>
+      </div>
+      <div class="card-body">
+        <div class="product-desc">
+          <span class="product-title">
+            {{ product.name }}
+                  <span class="badge">
+                    New
+                  </span>
+          </span>
+          <span class="product-caption">
+                  Computer collection 
+                </span>
+          <span class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star grey"></i>
+                </span>
+        </div>
+        <div class="product-properties">
+          <span class="product-size">
+                  <h4>Size</h4>
+                  <ul class="ul-size">
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#" class="active">10</a></li>
+                    <li><a href="#">11</a></li>
+                  </ul>
+                </span>
+          <span class="product-color">
+                  <h4>Colour</h4>
+                  <ul class="ul-color">
+                    <li><a href="#" class="orange active"></a></li>
+                    <li><a href="#" class="green"></a></li>
+                    <li><a href="#" class="yellow"></a></li>
+                  </ul>
+                </span>
+          <span class="product-price">
+            Tsh.{{ product.price }}/= 
+                </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+</div>
+{%endblock%}
