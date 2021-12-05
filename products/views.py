@@ -56,7 +56,7 @@ def createRoom(request):
         return redirect('home')
     context = {'form': form}
     return render(request, 'room_form.html', context)
-    #Update functionality 
+    #Update functionality or changes
 def updateRoom(request, pk):
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
