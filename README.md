@@ -1,4 +1,4 @@
-# storefront
+# storefront for uploading files 
 This is Javascript project aiming in develop charting site and ecommence site
 So if you have ideas feel free to drop them down
 
